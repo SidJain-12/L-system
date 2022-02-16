@@ -1,0 +1,12 @@
+{
+    "axiom": "X",
+    "productions": { "X": "F[+X]X[-X]FX", "F": "FF" },
+    "finals": {
+        "+": "() => { ctx.rotate((Math.PI / 180) * 45) }",
+        "-": "() => { ctx.rotate((Math.PI / 180) * -45) }",
+        "[": "() => { ctx.save() }",
+        "]": "() => { ctx.restore() }",
+        "F": "() => {\nctx.beginPath()\nctx.moveTo(0, 0)\nctx.lineTo(0, -100 / (koch.iterations + 1))\n ctx.stroke()\nctx.translate(0, -100 / (koch.iterations + 1))\n}",
+        "X": "() => {\nctx.beginPath()\nctx.moveTo(0, 0)\nctx.lineTo(0, -100 / (koch.iterations + 1))\n ctx.stroke()\nctx.translate(0, -100 / (koch.iterations + 1))\n}"
+    }
+}
